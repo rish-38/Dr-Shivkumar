@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+    <section class="container">
+        <div class="main">
+            <nav>
+                <a href="./">
+                    <span class="material-symbols-outlined .nav-icon">
+                    home
+                    </span>
+                    <span class="nav-link">Home</span></a>
+                <a href="about-me"> 
+                    <span class="material-symbols-outlined  .nav-icon">
+                        account_circle
+                        </span>
+                    <span class="nav-link">About Me</span></a>
+                <a href="heart-checkup">
+                    <span class="material-symbols-outlined .nav-icon">
+                        ecg_heart
+                        </span>
+                    <span class="nav-link">Heart Checkup</span></a>
+            </nav>
+            <div class="text">
+                <h1 class="intro">Hii, I'm your Doctor <br>
+
+                    <span>Shivkumar Chaurasiya</span>
+                </h1>
+                <h1 class="quote">“A healthy outside starts <br>
+                    from the inside.”</h1>
+            </div>
+            <div class="chatbox">
+                <input type="text" placeholder="Message for appointment…" id="w-input">
+                <button  onclick="message()" id="w-send">
+                    <span class="material-symbols-outlined">
+                        send
+                        </span>
+                </button>
+            </div>
+
+            <div class="hero">
+                <img src="media/shiv profile pic.png" alt="">
+                <div class="backdrop"></div>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="chat.js"></script>
+</html>

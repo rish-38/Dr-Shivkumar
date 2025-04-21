@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    padding: 0px;
+    margin: 0px;
+    background-image: linear-gradient(#00998F, #018178);
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+}
+
+section {
+    overflow: hidden;
+}
+
+.main {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+nav {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: 30px;
+    transition: 2s;
+}
+
+nav a {
+    padding: 0 15px;
+    margin: 0 30px;
+    color: #E1FEBB;
+    text-decoration: none;
+    font-size: 20px;
+    transition: 300ms;
+}
+
+nav .material-symbols-outlined{
+    font-size: 30px;
+    display: none;
+}
+
+.text {
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    left: 0;
+    right: 0;
+    width:100%;
+    margin: auto;
+    height: 0px;
+    padding: 0px;
+    color: #E1FEBB;
+    animation: text 1s ease-in-out 0s 1;
+}
+
+.intro {
+    position: relative;
+    top: 240px;
+    text-align: left;
+    font-size: clamp(18px, 2cqi, 46px);
+    font-weight: 300;
+    transition: 2s;
+}
+
+.intro span {
+    font-weight: 600;
+}
+
+
+.quote {
+    position: relative;
+    top: 500px;
+    text-align: right;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 200;
+    font-size: clamp(18px, 2cqi, 36px);
+    padding-left: 200px;
+    transition: 2s;
+}
+
+.hero {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    z-index: -1;
+}
+
+img {
+    position: absolute;
+    height: 95%;
+    bottom: 0px;
+    animation: image 1s ease-in-out 0s 1 forwards;
+    transition: 2s;
+}
+
+.backdrop {
+    height: 800px;
+    width: 800px;
+    border-radius: 50%;
+    background-color: #007068;
+    z-index: -1;
+    position: absolute;
+    bottom: -100px;
+    animation: back-drop 1s ease-in-out 0s 1 forwards;
+    transition: 2s;
+}
+
+.chatbox {
+    position:absolute;
+    bottom: 50px;
+    left: 0; 
+    right: 0; 
+    margin-inline: auto; 
+    width: fit-content;
+    background-color: white;
+    z-index: none;
+    border-radius: 10px;
+    overflow: hidden; 
+}
+input{
+    position: relative;
+    border: none;
+    width: 700px;
+    outline: none;
+    font-size: 20px;
+    padding: 10px;
+    transition: 2s;
+    left: 20px;
+    color: #949494;
+}
+
+input::placeholder{
+    color: #949494;
+    font-size: clamp(14px, 1.5cqi,20px);
+    font-family:monospace;
+}
+button{
+    position: relative;
+    top:6px;
+    right: 20px;
+    border: none;
+    background: none;
+    transition: 300ms;
+}
+
+button .material-symbols-outlined{
+    color:#007068;
+}
+
+
+
+
+
+
+
+
+
+/* All responsiveness */
+
+@media (max-width: 1400px) {
+    .backdrop {
+        transform: scale(0.9) translateY(25%);
+        animation: back-drop-mobile 1s ease-in-out forwards;
+    }
+
+    img {
+        height: 80%;
+    }
+    input{
+        width: 500px;
+            font-size: clamp(18px, 1.5cqi,20px);
+    }
+}
+
+@media (max-width: 900px) {
+    .intro {
+        left: 50px;
+        top: 200px;
+        font-size: clamp(18px, 2cqi, 24px);
+
+    }
+
+    .quote {
+        top: 120px;
+        right: 50px;
+        font-size: clamp(18px, 2cqi, 24px);
+        padding-left: 0px;
+    }
+    img {
+        height: 70%;
+    }
+    input{
+        width: 400px;
+    }
+
+}
+
+@media (max-width: 600px) {
+    br{
+        display: none;
+    }
+    .chatbox{
+        top: 40px;
+        bottom: inherit;
+    }
+    nav{
+        top: inherit;
+        position: absolute;
+        bottom: 0px;
+        right: 0;
+        left: 0;
+        margin-inline: auto; 
+        /* width: fit-content; */
+        width: 100%;
+        padding: 10px;
+        background-color: rgb(46, 58, 89,40%);
+    }
+    nav .nav-link{
+        display: none;
+    }
+    nav .material-symbols-outlined{
+        font-size: 30px;
+        display: inline;
+    }
+    input{
+        width: auto;
+    }
+}
+
+/* All hover effects */
+nav a:hover{
+    transform: scale(1.2);
+    font-weight: 600;
+}
+nav a:active{
+    color: #e1febb86;
+    font-weight: 400;
+    transition: 150ms;
+    transform: scale(1.2);
+}
+nav .material-symbols-outlined:active{
+    color: #e1febb86;
+    transition: 150ms;
+}
+button:hover{
+    transform: scale(1.2) rotate(-10deg);
+}
+button .material-symbols-outlined:active{
+    color:#00706871;
+}
+
+
+/* All animation */
+
+@keyframes text{
+    0%{
+        transform: translateY(-50px);
+        opacity: 0.3;
+        transform: scale(0.8);
+    }
+
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+
+    }
+}
+
+@keyframes image {
+    0%{
+        bottom: -100px;
+        opacity: 0.8;
+    }
+
+    100%{
+        bottom:0px;
+        opacity: 1;
+
+    }
+}
+@keyframes back-drop {
+    0%{
+        transform: scale(0.8);
+    }
+
+    100%{
+        transform: scale(1);
+    }
+}
+
+@keyframes back-drop-mobile {
+    0% {
+      transform: scale(0.5) translateY(200px);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(0.9) translateY(25%);
+      opacity: 1;
+    }
+  }

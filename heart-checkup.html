@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Checkup</title>
+    <link rel="stylesheet" href="./heart checkup.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+    <section class="container">
+        <div class="main">
+            <nav>
+                <a href="./">
+                    <span class="material-symbols-outlined .nav-icon">
+                        home
+                    </span>
+                    <span class="nav-link">Home</span></a>
+                <a href="about-me">
+                    <span class="material-symbols-outlined  .nav-icon">
+                        account_circle
+                    </span>
+                    <span class="nav-link">About Me</span></a>
+                <a href="heart-checkup">
+                    <span class="material-symbols-outlined .nav-icon">
+                        ecg_heart
+                    </span>
+                    <span class="nav-link">Heart Checkup</span></a>
+            </nav>
+            <div class="block">
+                <div class="box">
+
+                        <img src="media/poster.jpg" alt="">
+
+                    <form>
+                        <h1 class="item1">Heart Checkup</h1>
+                        <input type="text" placeholder="Enter your name" id="name">
+                        <input type="text" placeholder="Enter your age" id="age" required maxlength="2" minlength="1">
+                        <span>Do you exercise?</span>
+                        <select name="exercise" id="exercise">
+                            <option value="Yes"> Yes</option>
+                            <option value="No">No</option>
+                            <option value="sometimes">sometimes</option>
+                        </select>
+                        <span>Do you ger stressed often?</span>
+                        <select name="stressed" id="stressed">
+                            <option value="Yes"> Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                        <span>Do you smoke?</span>
+                        <select name="smoke" id="smoke">
+                            <option value="Yes"> Yes</option>
+                            <option value="No">No</option>
+                            <option value="sometimes">occasionally</option>
+                        </select>
+                        <span>Do you have diabetes?</span>
+                        <select name="diabetes" id="diabetes">
+                            <option value="Yes"> Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                        <span>Blood presure (currently)</span>
+                        <input type="text" class="bloodpressure" placeholder="systolic pressure" id="bloodpressure" required maxlength="3">
+                        <button class="btn" type="button" onclick="showResult()">Check up</button>
+                        <span class="error">Note: Honest answers help improve diagnosis.</span>
+                    </form>
+                </div>
+            </div>
+    </section>
+    <script src="heart checkup.js"></script>
+</body>
+
+</html>

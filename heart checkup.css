@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    padding: 0px;
+    margin: 0px;
+    background: linear-gradient(#064796bc, #1b5294),url("media/back.jpg");
+    object-fit: contain;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+}
+
+section {
+    overflow: hidden;
+}
+
+.main {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    /* z-index: -2; */
+}
+
+nav {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: 30px;
+    transition: 2s;
+}
+
+nav a {
+    padding: 0 15px;
+    margin: 0 30px;
+    color: #E1FEBB;
+    text-decoration: none;
+    font-size: 20px;
+    transition: 300ms;
+}
+
+nav .material-symbols-outlined {
+    font-size: 30px;
+    display: none;
+}
+
+.block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 10%;
+    margin: 150px 50px;
+    animation: move 1s ease-in-out 0s 1;
+}
+
+.box {
+    width: auto;
+    display: flex;
+    background: linear-gradient(#F5F5F5,#e4eceb);
+    border-radius: 15px;
+    overflow: hidden;
+
+}
+
+img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    max-width: 400px;
+    rotate: -20deg;
+    scale: 1.1;
+    left: -100px;
+    position: relative;
+    transition: 0.7s ease-in-out;
+
+}
+
+
+form {
+    display: grid;
+    padding: 50px 50px 50px 50px;
+    grid-template-columns: minmax(150px, 300px) minmax(100px, 150px);
+    row-gap: 10px;
+    column-gap: 40px;
+    font-size: clamp(13px, 2cqi, 16px);
+    color: rgb(60, 60, 60);
+    transition: 2s;
+
+}
+
+form h1 {
+    grid-column: span 2;
+    color: #00998F;
+    font-size: clamp(20px, 2cqi, 30px);
+}
+
+input {
+    border: 2px solid rgb(187, 187, 187);
+    padding: 5px 10px;
+    border-radius: 7px;
+    font-size: clamp(13px, 2cqi, 16px);
+}
+
+input:focus {
+    outline: #afbadb;
+}
+
+input::placeholder {
+    font-size: clamp(13px, 2cqi, 16px);
+    font-weight: 200;
+    color: rgb(150, 150, 150);
+}
+
+select {
+    text-align: center;
+    border: 2px solid rgb(187, 187, 187);
+    font-size: clamp(13px, 2cqi, 16px);
+    font-weight: 200;
+    color: rgb(60, 60, 60);
+    padding: 5px 0px;
+    border-radius: 7px;
+}
+
+select:focus {
+    color: rgb(60, 60, 60);
+    outline: none;
+}
+
+form button {
+    grid-column: 2 span;
+    width: 150px;
+    padding: 10px 0px;
+    font-size: clamp(13px, 2cqi, 16px);
+    background-color: #00998F;
+    border-radius: 7px;
+    border: none;
+    margin: 40px auto 0;
+    font-weight: 600;
+    color: #E1FEBB;
+    transition: 0.5s;
+}
+
+form .error{
+    grid-column: span 2;
+    padding-top: 10px ;
+    text-align: center;
+    font-weight: 300;
+    font-size: clamp(13px, 2cqi, 16px);
+}
+
+
+/* All responsiveness */
+
+@media (max-width: 1000px) {
+    img {
+        display: none;
+    }
+}
+
+@media (max-width: 750px) {
+    nav {
+        top: inherit;
+        position: absolute;
+        bottom: 0px;
+        right: 0;
+        left: 0;
+        margin-inline: auto;
+        /* width: fit-content; */
+        width: 100%;
+        padding: 10px;
+        background: #05356f;
+    }
+
+    nav .nav-link {
+        display: none;
+    }
+
+    nav .material-symbols-outlined {
+        font-size: 30px;
+        display: inline;
+    }
+
+    input {
+        width: auto;
+    }
+}
+
+@media (max-width: 580px) {
+    .main {
+        height: 89vh;
+        width: 100%;
+        position: relative;
+        /* z-index: -2; */
+    }
+
+    form {
+        grid-template-columns: minmax(150px, 300px);
+        padding: 0px 50px 50px;
+    }
+
+    form h1 {
+        grid-column: 1;
+        color: #00998F;
+        text-align: center;
+        margin: 25px 0px 0px;
+    }
+
+    form button {
+        grid-column: 1;
+        margin: 10px auto;
+        justify-content: center;
+    }
+
+    select {
+        width: 40%;
+    }
+
+    .block {
+        margin-top: 100px;
+        margin: 100px 50px;
+        padding: 0px;
+    }
+    form .error{
+        grid-column: 1;
+    }
+}
+
+
+
+
+/* All hover effects */
+
+nav a:hover {
+    transform: scale(1.2);
+    font-weight: 600;
+}
+
+nav a:active {
+    color: #e1febb86;
+    font-weight: 400;
+    transition: 150ms;
+    transform: scale(1.2);
+}
+
+nav .material-symbols-outlined:active {
+    color: #2e305980;
+    transition: 150ms;
+}
+
+.box:hover img {
+    rotate: 0deg;
+    left: 0px;
+}
+form button:hover{
+    background: #05356f;
+    scale: 1.1;
+}
+form button:active{
+    background: #06254b;
+    scale: 1.05;
+    transition: 0.1s;
+}
+
+/* All Animations */
+
+@keyframes move {
+    0% {
+        margin-top: 300px;
+        opacity: 0.6;
+    }
+
+    100% {
+
+        transform: translateY(0px);
+        opacity: 1;
+
+    }
+}
